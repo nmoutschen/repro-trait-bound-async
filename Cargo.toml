@@ -1,0 +1,11 @@
+[package]
+name = "repro-trait-async"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = { version = "0.14", features = ["http1", "server", "stream", "runtime"] }
+tokio = { version = "1.0", features = ["macros", "io-util", "sync", "rt-multi-thread"] }
+tower = { version = "0.4", features = ["make", "util"] }
